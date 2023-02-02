@@ -16,4 +16,5 @@
          - Запускаем сервер DevServer: npm run start
          - Восхищаемся проектом.
 
+        Ознакомиться с приложением можно по ссылке - https://olexiygolovko.github.io/weather_viewing_service/
 
