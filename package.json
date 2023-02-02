@@ -1,5 +1,5 @@
 {
-  "homepage": "https://olexiygolovko.github.io/weather_viewing_service/",
+  "homepage": "http://olexiygolovko.github.io/weather_viewing_service#README.md",
   "name": "my-weather-app",
   "version": "1.0.0",
   "description": "weather viewing service",
@@ -10,7 +10,13 @@
     "build": "webpack --config config/webpack.prod.js",
     "predeploy": "npm run build",
     "deploy": "git push"
+
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olexiygolovko/weather_viewing_service"
+  },
+  "keywords": [],
   "author": "Oleksii Holovko",
   "license": "ISC",
   "dependencies": {
