@@ -93,6 +93,9 @@ function Main() {
     return (
         <main>
             <div className="cover">
+                <div className='whatapp'>
+                <h2>Узнай погоду</h2>
+                </div>
 
                 <div className='button'>
                     <button onClick={getMyPosition}>Найти меня</button>
