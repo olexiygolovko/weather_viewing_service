@@ -1,20 +1,20 @@
-Нужно создать простейший сервис просмотра информации о погоде.
+We need to create a simple service for viewing weather information.
 
-        При создании сервиса нужно соблюсти следующие условия:
-                Необходимо использовать фреймворк React и адаптивный дизайн, чтобы страница открывалась на любом consumer-grade устройстве.
-                Пользователь должен либо иметь возможность выбрать из списка город, для которого ему нужен прогноз погоды.
-        Пользователь должен иметь возможность посмотреть данные на следующие временные промежутки:
-                «сейчас» (на день);
-                «ближайшие пять дней» (по дням на пять суток).
-        Данные должны запрашиваться через One Call API OpenWeather.
+         When creating a service, the following conditions must be met:
+                 It is necessary to use the React framework and responsive design so that the page opens on any consumer-grade device.
+                 The user should either be able to select from a list the city for which he needs a weather forecast.
+         The user should be able to view data for the following time periods:
+                 “now” (for the day);
+                 “the next five days” (by day for five days).
+         Data must be requested via OpenWeather's One Call API.
 
-        Для развертывания проекта проделайте следующие действия:
-         - Забираем репозиторий git clone https://github.com/olexiygolovko/weather_viewing_service
-         - Переходим в корневую папку проекта
-         - Устанавливаем модули и зависимости: npm install
-         - Билдим проект: npm run build
-         - Запускаем сервер DevServer: npm run start
-         - Восхищаемся проектом.
+         To deploy the project, do the following:
+          - We take the repository git clone https://github.com/olexiygolovko/weather_viewing_service
+          - Go to the root folder of the project
+          - Install modules and dependencies: npm install
+          - Build the project: npm run build
+          - Start the DevServer server: npm run start
+          - We admire the project.
 
-        Ознакомиться с приложением можно по ссылке - https://olexiygolovko.github.io/weather_viewing_service/
+         You can view the application using the link -~ https://olexiygolovko.github.io/weather_viewing_service/
 

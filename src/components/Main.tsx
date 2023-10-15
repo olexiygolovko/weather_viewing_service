@@ -8,11 +8,11 @@ import FiveDayWeather from "./Five_day_weather";
 
 
 function Main() {
-    const [isLoading, setLoading] = useState(true);  // Флаг готовности результата axios
-    const [city, setCity] = useState('Москва'); // отслеживаем изменение города
-    const [lat, setLat] = useState(55.7522); // отслеживаем изменение текущих координат, по умолчанию - Москва
+    const [isLoading, setLoading] = useState(true);  // Result ready flag axios
+    const [city, setCity] = useState('Warsaw'); // tracking changes in the city
+    const [lat, setLat] = useState(55.7522); // we track the change in the current coordinates, by default - Warsaw
     const [lon, setLon] = useState(37.6156);
-    const [widget, setWidget] = useState('current'); // Отслеживаем какой виджет (компонент) показывать
+    const [widget, setWidget] = useState('current'); // We track which widget (component) to show
     const [current, setCurrent] = useState([]);
     const [feels_like, setFeels_like] = useState([]);
     const [temp, setTemp] = useState([]);
@@ -22,15 +22,13 @@ function Main() {
     const [pict, setIcon] = useState('03n');
     const [key_ipgeolocation, setKey1] = useState(null);
     const [key_openweathermap, setKey2] = useState(null);
-    const citilist = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Казань', 'Нижний Новгород',
-    'Челябинск', 'Самара', 'Ростов-на-Дону', 'Уфа', 'Омск', 'Красноярск', 'Воронеж', 'Пермь', 'Волгоград'];
-
-    // Наполняем содержимое select
+    const citilist = ['Warsaw', 'Lodz', 'Poznań', 'Krakow'];
+    // We fill the contents select
     const options = citilist.map((text, index) => {
         return <option key={index}>{text}</option>;
     });
 
-    // Обрабатываем ключи
+    // We process the keys
 
     useEffect(() =>  {
         const keyGeo = "e8186dc8d75c495eb47dc77fbdc9a4ce";
@@ -39,7 +37,7 @@ function Main() {
         setKey2(keyWeather);
     },[]);
 
-    // Функции вычисления текущей геопзиции
+    // Functions for calculating the current geoposition
     function getMyPosition() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     };
@@ -53,22 +51,22 @@ function Main() {
         });
     };
     function onError(error) {
-      console.log('Информация о местоположении недоступна');
+      console.log('No location information available');
       console.log(error.message);
     };
 
-    // Получаем координаты выбранного города
+    // We get the coordinates of the selected city
     useEffect(() => {
 
         if (key_openweathermap !== undefined) {
             axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}','RUS'&limit=1&appid=${key_openweathermap}`).then(res => {
                 setLat(res.data[0].lat);
                 setLon(res.data[0].lon);
-                console.log('координаты выбранного города', res.data[0].lat, res.data[0].lon)
+                console.log('coordinates of the selected city', res.data[0].lat, res.data[0].lon)
             });
         };
 
-        // Получаем данные о погоде
+        // We get weather data
         if (key_openweathermap !== undefined) {
             axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key_openweathermap}&units=metric`).then(res => {
                 setCurrent(res.data.current);
@@ -94,9 +92,8 @@ function Main() {
         <main>
             <div className="cover">
                 <div className='whatapp'>
-                <h2>Узнай погоду</h2>
+                    <h2>Узнай погоду</h2>
                 </div>
-
                 <div className='button'>
                     <button onClick={getMyPosition}>Найти меня</button>
                     <select value={city} onChange={e=>setCity(e.target.value)}>
