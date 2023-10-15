@@ -82,27 +82,28 @@ function Main() {
         };
     }, [city, key_openweathermap]);
 
-    // Если флаг isLoading = false то выводим "Загрузка..."
+    // If the flag isLoading = false then we display Loading..."
     if (isLoading) {
-        return <h1 className="isLoading">Загрузка...</h1>;
+        return <h1 className="isLoading">Loading...</h1>;
     }
 
-    // Иначе выводим полученные из axios данные
+    // Otherwise, we display the data received from axios
+
     return (
         <main>
             <div className="cover">
                 <div className='whatapp'>
-                    <h2>Узнай погоду</h2>
+                    <h2>Check the weather</h2>
                 </div>
                 <div className='button'>
-                    <button onClick={getMyPosition}>Найти меня</button>
+                    <button onClick={getMyPosition}>To find me</button>
                     <select value={city} onChange={e=>setCity(e.target.value)}>
-                        <option disabled>Выберите город</option>
+                        <option disabled>Select a city</option>
                         {options}
                     </select>
 
-                    <button onClick={e=>setWidget("current")}>Сегодня</button>
-                    <button onClick={e=>setWidget("fivedays")}>На 5 дней</button>
+                    <button onClick={e=>setWidget("current")}>Today</button>
+                    <button onClick={e=>setWidget("fivedays")}>For 5 days</button>
                 </div>
 
                 {(widget === "current" && key_openweathermap !== undefined ) &&

@@ -1,10 +1,10 @@
 import * as React from "react";
 import "../styles/Widget.css";
 
-// Вывод погоды на сегодня + 5 дней
+//Weather output for today + 5 days
 function FiveDayWeather(props) {
-    const days =["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота",
-    "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const date = new Date();
     return (
         <div className="widget">

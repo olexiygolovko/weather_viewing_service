@@ -1,9 +1,9 @@
 import * as React from "react";
 import "../styles/Widget.css";
 
-// Получаем дату на сегодня с доп. параметрами
+// We get the date for today with additional. parameters
 function Current(props) {
-    const days =["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const date = new Date();
 
     return (
