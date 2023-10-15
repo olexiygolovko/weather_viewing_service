@@ -10,7 +10,7 @@ function FiveDayWeather(props) {
         <div className="widget">
             <div className="panel">
                 <div className="date">
-                    {props.day === 0 && `Сегодня - ${days[date.getDay()]}`}
+                    {props.day === 0 && `Today - ${days[date.getDay()]}`}
                     {props.day === 1 && `${days[date.getDay()+1]}`}
                     {props.day === 2 && `${days[date.getDay()+2]}`}
                     {props.day === 3 && `${days[date.getDay()+3]}`}

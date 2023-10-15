@@ -17,7 +17,7 @@ function Current(props) {
             </div>
             <div className="weather-right">
                 <div className="temp-main">{Math.round(props.temp)}°</div>
-                <div className="wind">Ветер: {props.wind_speed}m/s</div>
+                <div className="wind">Wind: {props.wind_speed}m/s</div>
             </div>
 
         </div>
